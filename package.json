@@ -1,15 +1,42 @@
 {
-  "name": "node-apcupsd",
-  "version": "0.1.0",
-  "author": "Ron Klinkien <ron@cyberjunky.nl>",
-  "dependencies": {
-    "mqtt": "*"
+  "name": "apcupsd2mqtt",
+  "version": "1.0.0-alpha.0",
+  "description": "Publish values from apcupsd to MQTT",
+  "main": "index.js",
+  "scripts": {
+    "test": "xo"
+  },
+  "engine": {
+    "node": ">=6.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/cyberjunky/node-apcupsd.git"
+    "url": "git+https://github.com/hobbyquaker/apcupsd2mqtt.git"
   },
+  "keywords": [
+    "apc",
+    "ups",
+    "mqtt",
+    "battery",
+    "voltage",
+    "power"
+  ],
+  "author": "Sebastian Raff <hq@ccu.io>",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cyberjunky/node-apcupsd/issues"
+    "url": "https://github.com/hobbyquaker/apcupsd2mqtt/issues"
+  },
+  "homepage": "https://github.com/hobbyquaker/apcupsd2mqtt#readme",
+  "dependencies": {
+    "mqtt": "^2.13.0",
+    "yalm": "^4.1.0",
+    "yargs": "^9.0.1"
+  },
+  "devDependencies": {
+    "camo-purge": "latest",
+    "xo": "latest"
+  },
+  "xo": {
+    "space": 4
   }
 }
