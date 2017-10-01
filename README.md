@@ -21,6 +21,7 @@
 MIT
 
 Copyright (c) 2017 Sebastian Raff
+
 Copyright (c) 2014 Ron Klinkien
 
 
