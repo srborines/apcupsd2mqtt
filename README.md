@@ -22,3 +22,7 @@ MIT
 
 Copyright (c) 2017 Sebastian Raff
 Copyright (c) 2014 Ron Klinkien
+
+
+[mit-badge]: https://img.shields.io/badge/License-MIT-blue.svg?style=flat
+[mit-url]: LICENSE
