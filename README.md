@@ -8,6 +8,9 @@
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 [![License][mit-badge]][mit-url]
 
+This is a fork of https://github.com/cyberjunky/node-apcupsd - modified to follow 
+[mqtt-smarthome architectural proposal](https://mqtt-smarthome/mqtt-smarthome).
+
 ## Install
 
 `$ sudo npm install -g apcupsd2mqtt`
@@ -20,10 +23,8 @@
 
 MIT
 
-Copyright (c) 2017 Sebastian Raff
-
+Copyright (c) 2017 Sebastian Raff    
 Copyright (c) 2014 Ron Klinkien
-
 
 [mit-badge]: https://img.shields.io/badge/License-MIT-blue.svg?style=flat
 [mit-url]: LICENSE
