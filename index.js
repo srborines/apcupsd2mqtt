@@ -17,7 +17,8 @@ mqtt.on('close', () => {
     log.warn('mqtt connection closed');
 });
 
-const datapoints = ['upsname', 'serialno', 'status', 'linev', 'linefreq', 'loadpct', 'battv', 'bcharge'];
+const datapoints = ['upsname', 'status', 'linev', 'linefreq', 'loadpct', 'battv', 'bcharge', 'timeleft'];
+const numeric = ['linev', 'linefreq', 'loadpct', 'battv', 'bcharge', 'timeleft'];
 const curvalues = {}; // Holds current values
 let devicename = config.upsName;
 
@@ -54,21 +55,26 @@ function poll() {
                 // If found as wanted value, store it
                 if (datapoints.indexOf(label) !== -1) {
                     value = value.replace(/(^\s+|\s+$)/g, '');
+                    if (numeric.indexOf(label) !== -1) {
+                      value = parseFloat(value.split(' ')[0]);
+                    }
+
                     if (label === 'upsname') {
                         devicename = value;
-                    }
-                    // Check if value is known, if not store and publish value
-                    if (curvalues[label] !== value) {
+                    } else if (curvalues[label] !== value) {
                         curvalues[label] = value;
                         log.debug(value + ' changed!');
                         // Publish value
-                        mqtt.publish(config.name + '/status/' + devicename + '/' + label, value, {retain: true});
+                        const topic = config.name + '/status/' + devicename + '/' + label;
+                        const payload = JSON.stringify({val: value});
+                        log.debug('mqtt >', topic, payload);
+                        mqtt.publish(topic, payload, {retain: true});
                     }
                 }
             });
         }
         log.debug(curvalues);
-        setTimeout(poll, config.interval);
+        setTimeout(poll, config.interval * 1000);
     });
 }
 
