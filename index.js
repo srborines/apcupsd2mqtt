@@ -56,7 +56,7 @@ function poll() {
                 if (datapoints.indexOf(label) !== -1) {
                     value = value.replace(/(^\s+|\s+$)/g, '');
                     if (numeric.indexOf(label) !== -1) {
-                      value = parseFloat(value.split(' ')[0]);
+                        value = parseFloat(value.split(' ')[0]);
                     }
 
                     if (label === 'upsname') {
