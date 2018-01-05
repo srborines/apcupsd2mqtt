@@ -2,6 +2,7 @@
 
 > Publish values from apcupsd to MQTT 🔌🔋
 
+[![mqtt-smarthome](https://img.shields.io/badge/mqtt-smarthome-blue.svg)](https://github.com/mqtt-smarthome/mqtt-smarthome)
 [![NPM version](https://badge.fury.io/js/apcupsd2mqtt.svg)](http://badge.fury.io/js/apcupsd2mqtt)
 [![Dependency Status](https://img.shields.io/gemnasium/hobbyquaker/apcupsd2mqtt.svg?maxAge=2592000)](https://gemnasium.com/github.com/hobbyquaker/apcupsd2mqtt)
 [![Build Status](https://travis-ci.org/hobbyquaker/apcupsd2mqtt.svg?branch=master)](https://travis-ci.org/hobbyquaker/apcupsd2mqtt)
