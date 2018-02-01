@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Publish values from apcupsd to MQTT",
   "main": "index.js",
+  "bin": {
+    "apcupsd2mqtt": "index.js"
+  },
   "scripts": {
     "test": "camo-purge ; xo"
   },
@@ -21,16 +24,16 @@
     "voltage",
     "power"
   ],
-  "author": "Sebastian Raff <hq@ccu.io>",
+  "author": "Sebastian Raff <hobbyquaker@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/hobbyquaker/apcupsd2mqtt/issues"
   },
   "homepage": "https://github.com/hobbyquaker/apcupsd2mqtt#readme",
   "dependencies": {
-    "mqtt": "^2.13.0",
+    "mqtt": "^2.15.1",
     "yalm": "^4.1.0",
-    "yargs": "^9.0.1"
+    "yargs": "^11.0.0"
   },
   "devDependencies": {
     "camo-purge": "latest",
