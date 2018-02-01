@@ -1,6 +1,6 @@
 {
   "name": "apcupsd2mqtt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Publish values from apcupsd to MQTT",
   "main": "index.js",
   "bin": {
