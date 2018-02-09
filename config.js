@@ -5,6 +5,8 @@ module.exports = require('yargs')
     .describe('name', 'topic prefix')
     .describe('ups-name', 'UPS Name. Is overwritten if apcupsd supplies a name')
     .describe('interval', 'Interval in seconds to poll apcaccess')
+    .describe('publish-changes-only', 'Don\'t publish unchanged values')
+    .boolean('publish-changes-only')
     .describe('verbosity', 'possible values: "error", "warn", "info", "debug"')
     .alias({
         h: 'help',
